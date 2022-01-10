@@ -1,0 +1,13 @@
+td {
+    border: 1px black solid;
+    padding: 20px;
+}
+
+body{
+    text-align: center;
+}
+
+#ourtable{
+    margin-left: auto;
+    margin-right: auto;
+}
