@@ -4,7 +4,7 @@
         <script src ="f_script.js" defer></script>
         <link href= "f_style.css" rel = "stylesheet" >
     </head>
-    <!-- removed onclick="clickFn(event)" from body-->
+    
     <body>           
         <div id="my-container">
             
@@ -12,7 +12,7 @@
                 <h3 id="color-text"> Cell Color: 
                     <select id="colors" onchange="selectColor()">
                         <option value="white">None</option>
-                        <option value="red">Red</option> 
+                        <option value="red" id="color_red">Red</option> 
                         <option value="orange">Orange</option>   
                         <option value="yellow">Yellow</option>
                         <option value="#1E90FF">DodgerBlue</option>  
@@ -36,10 +36,7 @@
                 <p id='notice'>To delete entire table, please use "delete rows"</p>
                 
                 <table id= "ourtable">
-                    <!-- <tr class="row">
-                        <td class="empty"></td>
-                    </tr> -->
-                       <!-- can't click the first cell eventhough I gave same name                -->
+                    
                 </table>
              
         </div>    

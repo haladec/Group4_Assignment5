@@ -1,3 +1,7 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 td {
     border: 1px black solid;
     padding: 20px;
@@ -11,3 +15,31 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+p{
+    color: gray;
+    font-size: small;
+}
+
+
+input{
+    margin-top: 5px;
+   
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+   
+
+}
+
+
+#color-text {
+    font-size: 20px;
+    background: -webkit-linear-gradient(rgb(255, 118, 118), rgb(8, 7, 61));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+#colors{
+    
+    -webkit-text-fill-color: black;
+}
+

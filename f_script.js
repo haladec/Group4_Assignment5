@@ -2,6 +2,7 @@
 let cells = 1;
 let isOver = false;
 
+//add rows to the grid
 function appendRow(){
     let tbl = document.getElementById('ourtable')
     let row = document.createElement('tr')
@@ -21,12 +22,12 @@ function appendRow(){
     console.log(tbl.rows.length)
 }
 
+//add columns to the grid
 function appendColumn(){
     
     let rows = document.getElementsByClassName('row'),
          i;
 
-    //console.log( "row length " + rows.length)
     if(rows.length === 0){
       return;  
     }
@@ -46,7 +47,7 @@ function appendColumn(){
 }
 
 
-
+// remove rows from the grid
 function deleteRows(){
        let rows = document.getElementsByClassName('row');
        let  len = rows.length-1;
@@ -54,10 +55,7 @@ function deleteRows(){
        if(len === -1){
            return;
        }       
-       // console.log(lastRow)
-       // console.log(len)       
-      //rows[0].parentNode.removeChild(rows[0]);
-        rows[len].parentNode.removeChild(rows[len]);  
+          rows[len].parentNode.removeChild(rows[len]);  
         if(len === 0 ){
             cells = 1;
         }
@@ -68,6 +66,7 @@ function deleteRows(){
 
 // when there is only one column left, need to use deleteRows function
 //to delete the rest of the cells.
+//remove columns from the grid
 function deleteColumns(){
     cells--;
     var tbl = document.getElementById('ourtable'),
@@ -82,30 +81,9 @@ function deleteColumns(){
         
             tbl.rows[i].deleteCell(lastCol);
         
-    }
-
-    console.log("lastCol" + lastCol)
-    if(lastCol <= -1){
-        reset(); 
-    }
-
-     console.log("lastCol" + lastCol)
+    } 
     
 }
-
-//Not working function//
-function reset(){
-    let myNode = document.getElementsByTagName('table');
-    while (myNode.firstChild){
-        console.log(test)
-       // myNode.removeChild(myNode.lastChild);
-       myNode.firstChild.remove();
-    }
-    console.log(rows)
-    cells =1;
-}
-
-
 
 
 //save color value
@@ -113,13 +91,14 @@ function selectColor(){
     return document.getElementById('colors').value;    
 }
 
+//change the cell's color
 function changeColor(){
     this.style.backgroundColor = selectColor();
     this.setAttribute('class', 'colored')
 }
 
 
-
+//fill all uncolored cells with the currently selected color
 function fill(){
     let cellSet = document.getElementsByTagName('td');
     let cellSpread = [...cellSet];
@@ -131,7 +110,7 @@ function fill(){
     }); 
 }
 
-
+// clear all cells/restore all cells to their original/initial color(white)
 function clearCells(){
     let cellSet = document.getElementsByTagName('td');
     let cellSpread = Array.from(cellSet, elem => elem );
@@ -141,7 +120,7 @@ function clearCells(){
     }); 
 }
 
-
+//click and hold (mouseover) from a single cell (start) to a different cell (end) such 
 function mouseAction(cell){
     cell.addEventListener('mousedown', e =>{   
                 
