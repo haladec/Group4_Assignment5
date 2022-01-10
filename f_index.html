@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src ="f_script.js" defer></script>
+        <link href= "f_style.css" rel = "stylesheet" >
+    </head>
+    
+    <body>           
+        <div id="my-container">
+            
+
+                <h3 id="color-text"> Cell Color: 
+                    <select id="colors" onchange="selectColor()">
+                        <option value="white">None</option>
+                        <option value="red" id="color_red">Red</option> 
+                        <option value="orange">Orange</option>   
+                        <option value="yellow">Yellow</option>
+                        <option value="#1E90FF">DodgerBlue</option>  
+                        <option value="#663399">RebeccaPurple</option>             
+                    </select>
+                </h3>
+
+                <input type="button" value="Add row" onclick=appendRow() class="append-row">
+                <br>
+                <input type="button" value="Add column" onclick=appendColumn() class="append-column">
+                <br>
+                <input type="button" value="Delete rows" onclick=deleteRows() class="delete-rows">
+                <br>
+                <input type="button" value="Delete columns" onclick=deleteColumns() class="delete-columns">
+                <br>
+                <input type="button" value="Fill all cells" onclick=fill() class="fill">
+                <br>
+                <input type="button" value="Clear Cells" onclick=clearCells() class="fill">
+                <br>               
+
+                <p id='notice'>To delete entire table, please use "delete rows"</p>
+                
+                <table id= "ourtable">
+                    
+                </table>
+             
+        </div>    
+    </body>
+</html>
