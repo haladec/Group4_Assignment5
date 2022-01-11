@@ -24,8 +24,9 @@ p{
 
 input{
     margin-top: 5px;
-   
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    border-image: linear-gradient(45deg,#743ad5, #d53a9d );
+    /* border-image-source: linear-gradient(to left, #743ad5, #d53a9d); */
+    border-image-slice: 1;
    
 
 }
