@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src ="f_script.js" defer></script>
-        <link href= "f_style.css" rel = "stylesheet" >
+        <script src ="script.js" defer></script>
+        <link href= "style.css" rel = "stylesheet" >
     </head>
     
     <body>           
@@ -20,17 +20,17 @@
                     </select>
                 </h3>
 
-                <input type="button" value="Add row" onclick=appendRow() class="append-row">
+                <input type="button" value="Add row" onclick="appendRow()" class="append-row">
                 <br>
-                <input type="button" value="Add column" onclick=appendColumn() class="append-column">
+                <input type="button" value="Add column" onclick="appendColumn()" class="append-column">
                 <br>
-                <input type="button" value="Delete rows" onclick=deleteRows() class="delete-rows">
+                <input type="button" value="Delete rows" onclick="deleteRows()" class="delete-rows">
                 <br>
-                <input type="button" value="Delete columns" onclick=deleteColumns() class="delete-columns">
+                <input type="button" value="Delete columns" onclick="deleteColumns()" class="delete-columns">
                 <br>
-                <input type="button" value="Fill all cells" onclick=fill() class="fill">
+                <input type="button" value="Fill all cells" onclick="fill()" class="fill">
                 <br>
-                <input type="button" value="Clear Cells" onclick=clearCells() class="fill">
+                <input type="button" value="Clear Cells" onclick="clearCells()" class="fill">
                 <br>               
 
                 <p id='notice'>To delete entire table, please use "delete rows"</p>
